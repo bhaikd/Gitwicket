@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0B0F19;
+  --foreground: #F8FAFC;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.font-card {
+  font-family: var(--font-oswald), var(--font-outfit), -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B0F19;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1E293B;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* 3D Card Perspective */
+.card-perspective {
+  perspective: 1200px;
+}
+
+.card-preserve-3d {
+  transform-style: preserve-3d;
+  transition: transform 0.15s ease-out;
+}
+
+/* Holographic Glare Layer */
+.card-glare {
+  background: radial-gradient(
+    circle at var(--glare-x, 50%) var(--glare-y, 50%),
+    rgba(255, 255, 255, 0.45) 0%,
+    rgba(255, 255, 255, 0.15) 35%,
+    transparent 65%
+  );
+  pointer-events: none;
+}
+
+/* Authentic Holographic Prismatic Foils */
+.foil-pattern-legend {
+  background: 
+    radial-gradient(ellipse at 50% 35%, rgba(220,38,38,0.75) 0%, rgba(185,28,28,0.55) 30%, rgba(30,27,75,0.85) 65%, rgba(11,15,25,0.95) 100%),
+    repeating-conic-gradient(from 0deg at 50% 35%, #F59E0B 0deg 15deg, #FEF08A 15deg 30deg, #D97706 30deg 45deg, #FBBF24 45deg 60deg),
+    linear-gradient(135deg, #FDE047 0%, #D97706 50%, #92400E 100%);
+  background-blend-mode: overlay, hard-light, normal;
+}
+
+.foil-pattern-national {
+  background: 
+    radial-gradient(ellipse at 50% 35%, rgba(16,185,129,0.75) 0%, rgba(5,150,105,0.55) 30%, rgba(6,78,59,0.85) 65%, rgba(11,15,25,0.95) 100%),
+    repeating-conic-gradient(from 0deg at 50% 35%, #10B981 0deg 15deg, #A7F3D0 15deg 30deg, #047857 30deg 45deg, #34D399 45deg 60deg),
+    linear-gradient(135deg, #6EE7B7 0%, #059669 50%, #064E3B 100%);
+  background-blend-mode: overlay, hard-light, normal;
+}
+
+.foil-pattern-state {
+  background: 
+    radial-gradient(ellipse at 50% 35%, rgba(6,182,212,0.75) 0%, rgba(2,132,199,0.55) 30%, rgba(8,51,68,0.85) 65%, rgba(11,15,25,0.95) 100%),
+    repeating-conic-gradient(from 0deg at 50% 35%, #06B6D4 0deg 15deg, #BAE6FD 15deg 30deg, #0284C7 30deg 45deg, #22D3EE 45deg 60deg),
+    linear-gradient(135deg, #67E8F9 0%, #0284C7 50%, #083344 100%);
+  background-blend-mode: overlay, hard-light, normal;
+}
+
+.foil-pattern-club {
+  background: 
+    radial-gradient(ellipse at 50% 35%, rgba(139,92,246,0.75) 0%, rgba(109,40,217,0.55) 30%, rgba(46,16,101,0.85) 65%, rgba(11,15,25,0.95) 100%),
+    repeating-conic-gradient(from 0deg at 50% 35%, #8B5CF6 0deg 15deg, #E9D5FF 15deg 30deg, #6D28D9 30deg 45deg, #A855F7 45deg 60deg),
+    linear-gradient(135deg, #C084FC 0%, #6D28D9 50%, #2E1065 100%);
+  background-blend-mode: overlay, hard-light, normal;
+}
+
+.foil-pattern-rookie {
+  background: 
+    radial-gradient(ellipse at 50% 35%, rgba(217,119,6,0.65) 0%, rgba(180,83,9,0.45) 30%, rgba(69,26,3,0.85) 65%, rgba(28,25,23,0.95) 100%),
+    repeating-conic-gradient(from 0deg at 50% 35%, #D97706 0deg 15deg, #FEF3C7 15deg 30deg, #92400E 30deg 45deg, #B45309 45deg 60deg),
+    linear-gradient(135deg, #FDE68A 0%, #92400E 50%, #451A03 100%);
+  background-blend-mode: overlay, hard-light, normal;
+}
